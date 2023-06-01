@@ -1,0 +1,30 @@
+Fråga 2 Uml Diagram
++----------------+
+|    Employee    |
++----------------+
+| - name: String |
+| - department: String |
++----------------+
+| + Employee(name: String, department: String) |
+| + name(): String |
+| + department(): String |
+| + toString(): String |
++----------------+
+        ^
+        |
+        |
++----------------+
+|    Engineer    |
++----------------+
+| + Engineer(name: String, department: String) |
+| + toString(): String |
++----------------+
+        ^
+        |
+        |
++----------------+
+|    Manager     |
++----------------+
+| + Manager(name: String, department: String) |
+| + toString(): String |
++----------------+

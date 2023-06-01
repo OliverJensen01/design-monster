@@ -1,0 +1,30 @@
+Is it possible for an Engineer to also become a Manager?
+
+Yes, it is possible for an instance of the Engineer class to also become an instance of the Manager class. This can be achieved through object composition or by changing the class of the object at runtime. Since they havewhat the other need
+
+Employee employee = new Engineer("Oliver Jensen", "Coder");
+employee = new Manager(employee.name(), employee.department());
+
+What happens if the designers of the Storage class decide to change the implementation of the List to LinkedList?
+Think about the method calls in main - does trimToSize() exist in LinkedList?
+Should Main know about what concrete type of List Storage provides?
+
+If u would decide to change the Storage class and the implementation of the List from an ArrayList to a LinkedList, there would be some implications for the method calls in the main method.
+
+The trimToSize() method does not exist in the LinkedList class. It is in the ArrayList api and is used to reduce the capacity of the underlying array to the actual size of the list. Becuase of this if the implementation is changed to use a LinkedList, calling storage.trimToSize() in the main method would result in a error.
+
+In terms of whether the Main class should know about the concrete type of List that Storage provides, it depends on the design goals and requirements. If Main relies on specific behaviors or methods that are only available in a certain implementation (ArrayList for example), then Main would need to know about it. But if Main can operate generically with any implementation of the List interface, it is preferable to program to the interface rather than the concrete implementation. This promotes loose coupling and allows for easier changes in the implementation details without affecting the Main class.
+
+If you want a removeRole(Role) method, how do you have to change the Role class?
+
+U have to update that it so it uses a role with a constructor in it. like this so u then can equals it
++------------------+
+|      Role        |
++------------------+
+| - name : String  |
++------------------+
+| + Role(String)   |
+| + name() : String|
+| + removeRole(Role) |
+| + toString() : String |
++------------------+
